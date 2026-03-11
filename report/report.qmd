@@ -1,0 +1,100 @@
+---
+title: "Association Between County-Level Naloxone Distribution Intensity and Changes in Opioid Overdose Mortality in California"
+format: html
+author: "Eli Singh"
+---
+
+
+### Background
+
+The opioid crisis remains a major public health challenge in the United States. Naloxone, an opioid antagonist that reverses overdose, has become a central component of harm reduction strategies. California’s Naloxone Distribution Project (NDP) distributed large volumes of naloxone kits to counties between 2018 and 2025, prioritizing high-burden areas.
+
+While naloxone distribution is widely supported, ecological evidence evaluating its association with changes in overdose mortality remains limited. This study evaluates whether counties with higher cumulative naloxone distribution intensity experienced different changes in opioid overdose mortality between 2018–2020 and 2021–2023.
+
+### Data Sources
+
+#### Naloxone Distribution Data
+
+County-level cumulative naloxone kits distributed per 100,000 residents (2018–2025) were obtained from the California Naloxone Distribution Project outcomes portal.
+
+#### Overdose Mortality Data
+
+County-year overdose mortality data (2018–2023) were obtained from CDC WONDER (Multiple Cause of Death database), using ICD-10 codes for drug poisoning deaths (X40–X44, X60–X64, X85, Y10–Y14).
+
+#### Urban-Rural Classification
+
+County urban–rural categories were obtained from the National Center for Health Statistics (NCHS) urban–rural classification scheme.
+
+### Study Design
+
+This analysis used an ecological county-level design.
+
+For each county:
+
+-   Baseline overdose rate = mean crude rate (2018–2020)
+
+-   Follow-up overdose rate = mean crude rate (2021–2023)
+
+-   Primary outcome = change in overdose rate (follow-up − baseline)
+
+Naloxone distribution intensity was treated as a county-level exposure variable (kits per 100,000 residents, cumulative 2018–2025).
+
+### Statistical Analysis
+
+Two primary models were estimated.
+
+#### Model 1: Absolute Change
+
+$ΔOverdose Rate_i​= β0​+ β1​Naloxone_i​+ β2​Baseline_i​+γUrbanRural_i​+ϵ_i​$
+
+Naloxone intensity was scaled in units of 1,000 kits per 100,000 residents for interpretability.
+
+#### Model 2: Proportional Change (Primary Model)
+
+$log(Follow up Rate_i) - log(Baseline Rate_i) = \beta_0 + \beta_1 Naloxone_i + \beta_2 Baseline_i + \gamma UrbanRural_i + \epsilon_i$
+
+The log-change specification reduces sensitivity to baseline scale differences and allows interpretation in proportional terms.
+
+### Results
+
+#### Descriptive Findings
+
+Overdose mortality increased in all but two counties between 2018-2020 and 2021-2023. Only Imperial and Amador counties exhibited a decline in overdose mortality during this period.
+
+Naloxone distribution intensity varied substantially across counties, with some high-burden counties (e.g. Humboldt, Mendocino, San Francisco) exhibiting both high baseline overdose rates and high naloxone distribution intensity.
+
+#### Association Between Naloxone Intensity and Absolute Change
+
+In adjusted models controlling for baseline overdose rates and urban–rural classification, each additional 1,000 naloxone kits per 100,000 residents was associated with a 0.14 increase in overdose deaths per 100,000 residents (p = 0.099).
+
+This positive association likely reflects targeted naloxone deployment to counties experiencing increasing overdose burden, indicating a reactive distribution method rather than a proactive one.
+
+#### Proportional Change Model
+
+After adjusting for baseline overdose rates and urban-rural classification, naloxone distribution intensity was not significantly associated with proportional changes in overdose mortality (p = 0.274).
+
+Baseline overdose rate was significantly associated with proportional change, suggesting regression-to-the-mean dynamics or structural differences in growth patterns across counties.
+
+### Interpretation
+
+The findings indicate that counties with higher naloxone distribution intensity experienced larger increases in overdose mortality in unadjusted analyses. However, this association attenuated and became statistically non-significant after adjusting for baseline severity.
+
+These results are consistent with reverse targeting: naloxone distribution was prioritized in counties with higher or rising overdose burden.
+
+The ecological design limits causal inference. Naloxone distribution intensity alone does not explain variation in overdose mortality trends across counties.
+
+### Limitations
+
+-   Ecological design (no individual-level exposure data)
+
+-   Naloxone distribution level only available as cumulative intensity
+
+-   Potential reverse causality
+
+-   Concurrent policy change or rise in street drug levels not accounted for
+
+-   Mortality rates are not age-adjusted
+
+### Conclusion
+
+In this county-level evaluation, cumulative naloxone distribution intensity was not independently associated with proportional reductions in overdose mortality between 2018–2020 and 2021–2023 after adjusting for baseline rates. These findings suggest that naloxone distribution alone is not an effective harm reduction strategy. Coupling naloxone distribution with fentanyl test strip distribution, opioid overdose education, and other harm reduction strategies will likely be more effective in reducing overdose mortality.
